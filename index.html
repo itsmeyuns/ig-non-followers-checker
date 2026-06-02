@@ -1,19 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Handle</title>
-</head>
-<body>
-    <div>
-        <h2>Card Title</h2>
-        <p>This is a simple card without any CSS. It contains a title and a description.</p>
-        <button>Click Me</button>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <h1>📸 Instagram Non-Followers Checker</h1>
+        <p class="subtitle">
+          Upload your Instagram followers and following JSON files.
+        </p>
+
+        <div class="upload-group">
+          <label for="followersFile">Followers JSON</label>
+          <input type="file" id="followersFile" accept=".json" />
+        </div>
+
+        <div class="upload-group">
+          <label for="followingFile">Following JSON</label>
+          <input type="file" id="followingFile" accept=".json" />
+        </div>
+
+        <button id="checkBtn">Find Non-Followers</button>
+
+        <div class="results">
+          <h2 id="count"></h2>
+          <ul id="not-following-back"></ul>
+        </div>
+      </div>
     </div>
-<div>
-	<h2>Users Not Following Back</h2>
-    <ul id="not-following-back"></ul>
-</div>
-	<script src='script.js'></script>
-</body>
+    <script src="script.js"></script>
+    <!-- <script src="old_script.js"></script> -->
+  </body>
 </html>
