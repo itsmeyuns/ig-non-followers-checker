@@ -7,31 +7,51 @@
   </head>
   <body>
     <div class="container">
-      <div class="card">
-        <h1>📸 Instagram Non-Followers Checker</h1>
-        <p class="subtitle">
-          Upload your Instagram followers and following JSON files.
-        </p>
+      <div class="tabs">
+        <button class="tab active" data-target="nonFollowersCard">
+          👥 Non-Followers Checker
+        </button>
 
+        <button class="tab" data-target="requestsCard">📤 Requests Sent</button>
+      </div>
+
+      <!-- Card 1 -->
+      <div id="nonFollowersCard" class="card active">
         <div class="upload-group">
-          <label for="followersFile">Followers JSON</label>
+          <label>Followers JSON</label>
           <input type="file" id="followersFile" accept=".json" />
         </div>
 
         <div class="upload-group">
-          <label for="followingFile">Following JSON</label>
+          <label>Following JSON</label>
           <input type="file" id="followingFile" accept=".json" />
         </div>
 
         <button id="checkBtn">Find Non-Followers</button>
 
         <div class="results">
-          <h2 id="count"></h2>
-          <ul id="not-following-back"></ul>
+          <h3 class="count" id="not-following-back-count"></h3>
+          <ul id="not-following-back" class="results-list"></ul>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div id="requestsCard" class="card">
+        <div class="upload-group">
+          <label>Requests JSON</label>
+          <input type="file" id="requestsFile" accept=".json" />
+        </div>
+
+        <button id="requestsBtn">Show Requests</button>
+
+        <div class="results">
+          <h3 class="count" id="requests-count"></h3>
+          <ul id="pending-requests" class="results-list"></ul>
         </div>
       </div>
     </div>
     <script src="script.js"></script>
+    <!-- <script src="v2.js"></script> -->
     <!-- <script src="old_script.js"></script> -->
   </body>
 </html>

@@ -25,6 +25,40 @@ body {
     max-width: 800px;
 }
 
+/* TABS */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .08);
+    color: white;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.tab:hover {
+    background: rgba(255, 255, 255, .15);
+}
+
+.tab.active {
+    background: linear-gradient(90deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5);
+}
+
+
+/* CARDS */
 .card {
     background: rgba(20, 20, 20, 0.75);
     backdrop-filter: blur(15px);
@@ -32,6 +66,28 @@ body {
     border-radius: 24px;
     padding: 35px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    display: none;
+    animation: fade .35s ease;
+}
+
+.card.active {
+    display: block;
+}
+
+.card.active {
+    display: block;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1 {
@@ -93,23 +149,23 @@ button:hover {
     margin-top: 30px;
 }
 
-#count {
+.count {
     color: white;
     margin-bottom: 15px;
     text-align: center;
 }
 
-#not-following-back {
+.results-list {
     list-style: none;
     max-height: 400px;
     overflow-y: auto;
 }
 
-#not-following-back li {
+.results-list li {
     margin-bottom: 10px;
 }
 
-#not-following-back a {
+.results-list a {
     display: block;
     padding: 12px 16px;
     border-radius: 12px;
@@ -119,7 +175,7 @@ button:hover {
     transition: 0.25s;
 }
 
-#not-following-back a:hover {
+.results-list a:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateX(5px);
 }
