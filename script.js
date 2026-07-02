@@ -120,11 +120,11 @@ document.getElementById("requestsBtn").addEventListener("click", async () => {
     list.innerHTML = "";
 
     requests
-      .sort((a, b) => {
-        const ua = getLabelValue(a, "Username") || "";
-        const ub = getLabelValue(b, "Username") || "";
-        return ua.localeCompare(ub);
-      })
+      // .sort((a, b) => {
+      //   const ua = getLabelValue(a, "Username") || "";
+      //   const ub = getLabelValue(b, "Username") || "";
+      //   return ua.localeCompare(ub);
+      // })
       .forEach((item) => {
         const username = getLabelValue(item, "Username");
 
