@@ -88,11 +88,9 @@ document.getElementById("checkBtn").addEventListener("click", async () => {
 
     list.innerHTML = "";
 
-    notFollowingBack
-      .sort((a, b) => a.localeCompare(b))
-      .forEach((username) => {
-        list.appendChild(createUserLink(username));
-      });
+    notFollowingBack.forEach((username) => {
+      list.appendChild(createUserLink(username));
+    });
   } catch (err) {
     console.error(err);
     alert("Invalid JSON file.");
